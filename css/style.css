@@ -39,6 +39,7 @@ p span {
 
 /* ---- .main is for artist tile ----  */
 
+
 .main {
   width: 390px !important;
   margin-bottom: 30px !important;
@@ -131,6 +132,7 @@ p span {
   /* vertical gutter */
   margin-bottom: 10px;
   display: table;
+
 }
 
 .grid-item img{
@@ -140,6 +142,9 @@ p span {
   display: table-row;
 }
 
+.grid-item .img{
+  cursor: pointer;
+}
 
 /* ---- grid-sizer ---- */
 

@@ -133,7 +133,7 @@ $(document).ready(function() {
       }
 
       //css for lightbox
-      $('.backdrop, .box').animate({
+      $('.backdrop').animate({
         'opacity': '.50'
       }, 300, 'linear');
       $('.box').animate({
