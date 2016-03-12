@@ -5,6 +5,8 @@ $(document).ready(function() {
   for(var i = 1; i <= 23; i++){
     $('.grid').append('<div class="grid-item"><img class="img" src="img/' + i + '.jpg"></div>');
   }
+
+
   //next line is used after the img tag in previous append function to add title , materials used, and price under image
 //<p><span class="title">Title (Month/Year)</span><span>Materials Used</span><span class="price">$0000</span></p></div>
 
@@ -162,6 +164,8 @@ $(document).ready(function() {
   //toggle main class creates a bigger div box
   $(this).toggleClass('main');
   $('#aboutText').toggleClass('animated fadeInDown');
+    $('#about').toggleClass('animated pulse');
+
   //checking text in aboutText, if empty add text. Used for toggle
   $("#aboutText").text($("#aboutText").text() == aboutText ? '' : aboutText);
     $grid.masonry();
