@@ -163,7 +163,7 @@ $(document).ready(function() {
 
   //toggle main class creates a bigger div box
   $(this).toggleClass('main');
-  $('#aboutText').toggleClass('animated fadeInDown');
+  $('#aboutText').toggleClass('animated fadeInDown aboutMargin');
     $('#about').toggleClass('animated pulse');
 
   //checking text in aboutText, if empty add text. Used for toggle
