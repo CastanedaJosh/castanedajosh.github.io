@@ -1,0 +1,235 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #333;
+  font-family: 'Montserrat', 'HelveticaNeue', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+a,
+a:hover,
+a:link{
+  text-decoration: none;
+}
+
+.container-fluid {
+  padding: 0 !important;
+}
+
+p {
+  background-color: #FFF;
+  color: #000;
+  padding: 0 10px 0 10px;
+  margin-top: 10px;
+}
+
+
+/* makes p span tags go on new line */
+
+p span {
+  display: block;
+}
+
+
+/* ---- .main is for artist tile ----  */
+
+.main {
+  width: 390px !important;
+  margin-bottom: 30px !important;
+}
+
+.main p span {
+  display: inline;
+}
+
+.main p {
+  font-size: 2rem;
+  font-weight: lighter;
+  font-family: sans-serif;
+}
+
+
+/* ---- grid-item for header items----  */
+
+.headers {
+  color: #333;
+  padding: 10px;
+  text-transform: uppercase;
+  font-size: 4.5rem;
+  letter-spacing: 2px;
+}
+
+/* ---- header box changes ----  */
+
+#about{
+  width:  390px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#aboutText{
+  margin: 20px;
+  padding: 0 10px 0 10px;
+  text-transform: none;
+  letter-spacing: none;
+  font-weight: normal;
+  font-size: 20px;
+    font-family: 'Montserrat', 'HelveticaNeue', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+}
+
+
+/* ---- grid p span tag modifiers----  */
+
+.artist {
+  font-weight: bold;
+  clear: right;
+}
+
+.title {
+  font-style: italic;
+}
+
+.price {
+  text-align: right;
+  font-style: italic;
+}
+
+
+/* ---- grid ---- */
+
+.grid {
+  max-width: 2500px;
+  margin-top: 50px !important;
+}
+
+
+/* clearfix */
+
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+
+/* ---- grid-item ----  */
+
+.grid-item {
+  background-color: #FFF;
+  width: 200px;
+  box-shadow: 8px 8px 2px 1px rgba(0, 0, 0, 0.75);
+  float: left;
+  /* vertical gutter */
+  margin-bottom: 10px;
+  display: table;
+}
+
+.grid-item img{
+  width: 100% !important;
+  height: auto !important;
+  position: relative;
+  display: table-row;
+}
+
+
+/* ---- grid-sizer ---- */
+
+.grid-sizer {
+  width: 20px;
+}
+
+
+/* ---- lightbox ---- */
+
+.backdrop {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  background: #000;
+  opacity: .0;
+  filter: alpha(opacity=0);
+  z-index: 5;
+  display: none;
+}
+
+.box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: #FFF;
+  z-index: 6;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px #444;
+  display: none;
+}
+
+/* ---- misc changes ---- */
+
+.socialIconSet{
+  width: 360px !important;
+  background-color: transparent;
+  box-shadow: none;
+  float: left;
+  /* vertical gutter */
+  margin-bottom: 10px;
+  text-align: center;
+
+}
+
+.grid-item .socialIcon {
+  width: 80px !important;
+  display: block !important;
+  float: left;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+footer {
+  color: #FFF;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #444;
+  text-align: center;
+}
+
+
+@media screen and (max-width: 480px){
+  .grid {
+    margin: 0 auto;
+    width: 100% !important;
+    margin-top: 0 !important;
+  }
+  .grid-item {
+    width: 180px;
+    /* vertical gutter */
+    margin-bottom: 10px;
+    display: table;
+  }
+  .main {
+    width: 100% !important;
+    left: 0px !important;
+  }
+
+  .links {
+    width: 90% !important;
+  }
+
+  footer {
+    font-size: 10px !important;
+  }
+}

@@ -1,261 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Joe Pichardo</title>
+  <title>Castaneda Art</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
 
-  <style type="text/css">
-  /* relative position */
-  body{
-    position: relative;
-    font-family: 'Montserrat', 'HelveticaNeue', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    background-color: #ECECEC;
-  }
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <script src="scripts/masonry.pkgd.min.js"></script>
+  <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
 
-  .container-fluid{
-    padding: 0;
-  }
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="scripts/script.js"></script>
+<link rel="stylesheet" href="css/animate.css">
 
-  a, a:hover, a:active, a:visited {
-    text-decoration: none !important;
-  }
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+  ga('create', 'UA-72807265-1', 'auto');
+  ga('send', 'pageview');
 
-  #home{
-    background: url(img/desk.jpg) no-repeat; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    width: 100%;
-    margin-top: -30px;
-  }
-  /* inner home div settings */ 
-  #homeHeader{
-    color: #E8E5E5;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);  
-    -ms-transform: translate(-50%, -50%);  
-    transform: translate(-50%, -50%);
-
-  }
-
-  .headerTitle{
-    color: #E8E5E5;
-    text-align: center;
-    text-shadow: 0px 2px 4px #000;
-        text-transform: uppercase;
-
-
-  }
-
-  #fullName{
-    color: #C12121;
-  }
-
-  hr{
-    width: 100px;
-    border-top: 8px solid #C12121;
-        box-shadow: 0px 2px 4px #000;
-
-  }
-
-  #summary{
-    font-size: 2rem;
-    color: #E8E5E5;
-    width: 80%;
-    margin: 0 auto;
-        text-shadow: 0px 2px 4px #000;
-
-  }
-
-  /* height is 100% of viewport for each div */
-  #home{
-    height:100vh;
-    width: 100%;
-  }
-
-  #portfolio, #contact{
-    width: 100%;
-  }
-
-  .title{
-    margin-top: 70px;
-  }
-
-/* nav bar */  
-  .navbar-default{
-    background-color: rgba(255, 255, 255, 0);  
-    border: none;
-  }
-/* nav bar for left side */  
-  #firstName{
-    color: #C12121;
-  }
-
-  .navbar-default .navbar-brand{
-    color: #E8E5E5;
-    text-shadow: 0px 2px 4px #000;
-    padding-left: 50px;
-    font-size: 3rem;
-
-  }
-/* nav bar for right side */  
-  #nav ul li{
-    font-weight: 600;
-  }
-
- .navbar-default .navbar-nav>li>a{
-    color: #E8E5E5;
-    font-size: 2rem;
-    text-shadow: 0px 2px 4px #000;
-
-  }
-
-  .navbar-default .navbar-nav>li>a:hover{
-    color: #C12121;
-  }
-
-  .nav{
-    padding-right: 50px;
-    color: #FFF;
-  }
-  /* settings for collapsed menu */
-
-   .navbar-toggle{
-    margin-right: 50px;
-   }
-
-   .navbar-default .navbar-collapse{
-    padding-left: 50px;
-   }
-
-   @media screen and (max-width: 767px) {
-     .navbar-header{
-          background-color: rgba(0,0,0,0.75);
-     }
-
-      .navbar-default .navbar-collapse{
-        background-color: rgba(0,0,0,0.75);
-     }
-}
-
-  /* settings for portfolio */
-
-  .projectBox{
-   box-shadow: 0px 0px 15px #999;
-  }
-
-@media screen and (min-width: 767px) {
-  .projectBox{
-    width: 50%;
-    float:none;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  #contact .title{
-    padding-top: 70px;
-    clear: both;
-  }
-}
-
-  .projectImg{
-    width: 100%;
-  }
-
-  .projectTitle{
-    width: 100%;
-    height: 100%;
-    background-color: #E8E5E5;
-    font-size: 3rem;
-    padding-top: 25px;
-  }
-
-  .projectSub{
-    font-weight: lighter;
-    font-family: sans-serif;
-    font-size: 2rem;
-  }
-
-
-  </style>
-
-  <script type="text/javascript">
-   $(document).ready(function(){
-//nav bar background changes after scrolling down 50px
-$( window ).scroll(function() {
-    if($(window).scrollTop() > 50){
-      $('.navbar-default').css("background-color", "rgba(0,0,0,0.75)");
-    }else{
-      $('.navbar-default').css("background-color", "rgba(0,0,0,0)");
-    }
-
-});
-
-    //scroll to function for navbar
-    $("#nav ul li a[href^='#']").on('click', function(e) {
-       // prevent default anchor click behavior
-       e.preventDefault();
-       // animate
-       $('html, body').animate({
-           scrollTop: $(this.hash).offset().top-120 //offset by 50 for navbar
-         }, 1000, function(){
-           // when done, add hash to url
-           // (default click behaviour)
-           window.location.hash = this.hash;
-         });
-    });
-
-    $('#portfolio').append('<div class="projectBox col-xs-12 center-block"><img class="projectImg" src="img/castanedaArt.jpg"><div class="projectTitle text-center">Castaneda Art<p class="projectSub">Masonry.js, jQuery</p></div></div>');
-  
-  });
-
-
-  </script>
+</script>
   
 </head>
-<!-- data spy finds position of window and updates #navbar of the position with a 60px offset -->
 <body>
 
-<!-- navbar with anchor tags linked to the id of divs -->
-<nav class="navbar navbar-default navbar-fixed-top" id="nav" role="navigation">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#"><span id="firstName">Joe</span> Pichardo</a>
-      <!-- navList is collapsed for smaller screens adds navList to the dropdown menu -->
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navList">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-    </div>
-    <!-- navList collapses on smaller screen and a button takes its place -->
-    <div class="collapse navbar-collapse" id="navList">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li> 
-      </ul>
-    </div>
-  </div><!-- /.navbar-collapse -->
-</nav>
 
-<div class="container-fluid">
-  <div id="home"><div id="homeHeader"><h1 class="headerTitle" id="fullName">Joe Pichardo</h1><h1 class="headerTitle">Web Developer</h1><hr><p id="summary" class="text-center">Hi, I'm a Front-End Web Developer coding out of Phoenix, Arizona. I continue to work on building my knowledge on web languages and develop my creativity in different projects.</p></div></div>
-  <div id="portfolio"><h1 class="text-center title">Portfolio</h1><h4 class="text-center">- Latest Work -</h4></div>
-  <div id="contact"><h1 class="text-center title">Contact</h1><h4 class="text-center">- Chat with Me -</h4><h3 class="text-center">Or just email me at <a href="mailto:josephpichar@gmail.com?Subject=Hello" target="_top">josephpichar@gmail.com</a>.</h3></div>
+<div class="container-fluid grid center-block">
+  <div class="grid-item main"><img src="img/josh.jpg">
+    <p>Artwork by <span class="artist">Joshua Castaneda</span></p>
+      <div class="grid-item socialIconSet">
+        <a target="_blank" href="https://www.instagram.com/castanedajoshua/"><img class="socialIcon" src="img/instagram.png"></a>
+        <!--
+        <a target="_blank" href="http://www.facebook.com"><img class="socialIcon" src="../img/castanedaArt/facebook.png"></a>
+        <a target="_blank" href="http://www.twitter.com"><img class="socialIcon" src="../img/castanedaArt/twitter.png"></a>
+        -->
+        <a href="mailto:castanedajoshua92@gmail.com?Subject=Hello" ><img class="socialIcon" src="img/mail.png"></a>
+
+      </div>
+  </div>
+  <div class="grid-item links" id="about">
+    <span class="headers">about</span>
+    <p id='aboutText'></p>
+  </div>
+  <div class="grid-item links"><a href="mailto:castanedajoshua92@gmail.com?Subject=Hello" ><span class="headers">contact</span></a></div>
+
 </div>
 
+
+
+<footer>&copy; 2015
+  <script>
+    new Date().getFullYear() > 2010 && document.write("-" + new Date().getFullYear());
+  </script>, Castaneda Company. Developed by <a href="http://www.joepichardo.com">Joe Pichardo</a>.</footer>
 </body>
 </html>
