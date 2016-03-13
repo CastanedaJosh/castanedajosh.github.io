@@ -146,6 +146,17 @@ p span {
   cursor: pointer;
 }
 
+/* ---- used to expand img on click ---- */
+.expand{
+  width: 585px !important;
+  height: auto;
+}
+
+.expandSmall{
+  width: 390px !important;
+  height: auto;
+}
+
 /* ---- grid-sizer ---- */
 
 .grid-sizer {

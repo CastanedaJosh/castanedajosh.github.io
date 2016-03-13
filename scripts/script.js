@@ -109,6 +109,17 @@ $(document).ready(function() {
 
     //lightbox items on click function
     $('.grid-item .img').click(function() {
+      //makes images bigger instead of using lightbox
+      //if ($(window).width() < 620 ){
+        $( this ).parent('.grid-item').toggleClass('expandSmall');
+        $grid.masonry();
+        /*
+      }else{
+        $( this ).parent('.grid-item').toggleClass('expand');
+        $grid.masonry();
+      }
+    */
+  /* currently blocked out is the lighbox settings using expand class above instead that enlarges images
 
       $('body').append('<div onclick="close_box()" class="backdrop"></div><img onclick="close_box()" class="box" src="' + $(this).attr("src") + '"></div>');
       $('.backdrop').css('height', '' + $(document).height() + 'px');
@@ -152,6 +163,10 @@ $(document).ready(function() {
           "height": "auto"
         });
       }
+  //end of lightbox settings
+
+
+      */
     });//end of img click function
 
   }//end of if (screen > 410) statement 
