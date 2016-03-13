@@ -158,7 +158,8 @@ $(document).ready(function() {
 
   var aboutText = "Residing in Phoenix, I am a current student of Arizona State University at the Herberger Institute of Design. Being 23 years young, I strive to expand on what I can do creatively as I mainly working with mix media, which includes, but not limited to, watercolors, graphite, ink, and markers. I emphasize my work mainly on human form, focusing on those in my life and around me. My medium targets color and manipulation of the human form with environments around my subjects.";
 
-  $('.grid-item .img, .socialIcon, .grid-item.links').hover(function(){
+  //effects on images when hovering , not used in about and email box because of resizing issues
+  $('.grid-item .img, .socialIcon').hover(function(){
     $(this).toggleClass('animated pulse');
   });
 
