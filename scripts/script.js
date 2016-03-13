@@ -2,9 +2,11 @@
 
 $(document).ready(function() {
 
-  for(var i = 1; i <= 23; i++){
+//add images to grid, files/images are listed as numbers
+ /* for(var i = 1; i <= 23; i++){
     $('.grid').append('<div class="grid-item"><img class="img" src="img/' + i + '.jpg"></div>');
   }
+  */
 
 
   //next line is used after the img tag in previous append function to add title , materials used, and price under image
@@ -108,7 +110,7 @@ $(document).ready(function() {
     //lightbox items on click function
     $('.grid-item .img').click(function() {
 
-      $('body').append('<div onclick="close_box()" class="backdrop"></div><img onclick="close_box()" class="box" src="' + $(this).attr("src") + '" data-packed></div>');
+      $('body').append('<div onclick="close_box()" class="backdrop"></div><img onclick="close_box()" class="box" src="' + $(this).attr("src") + '"></div>');
       $('.backdrop').css('height', '' + $(document).height() + 'px');
 
       //get naturalHeight and naturalWidth of image reference: https://css-tricks.com/snippets/jquery/get-an-images-native-width/
