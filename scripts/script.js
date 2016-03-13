@@ -108,7 +108,7 @@ $(document).ready(function() {
     //lightbox items on click function
     $('.grid-item .img').click(function() {
 
-      $('body').append('<div onclick="close_box()" class="backdrop"></div><img onclick="close_box()" class="box" src="' + $(this).attr("src") + '"></div>');
+      $('body').append('<div onclick="close_box()" class="backdrop"></div><img onclick="close_box()" class="box" src="' + $(this).attr("src") + '" data-packed></div>');
       $('.backdrop').css('height', '' + $(document).height() + 'px');
 
       //get naturalHeight and naturalWidth of image reference: https://css-tricks.com/snippets/jquery/get-an-images-native-width/
@@ -158,6 +158,10 @@ $(document).ready(function() {
 
   var aboutText = "Residing in Phoenix, I am a current student of Arizona State University at the Herberger Institute of Design. Being 23 years young, I strive to expand on what I can do creatively as I mainly working with mix media, which includes, but not limited to, watercolors, graphite, ink, and markers. I emphasize my work mainly on human form, focusing on those in my life and around me. My medium targets color and manipulation of the human form with environments around my subjects.";
 
+  $('.grid-item .img, .socialIcon, .grid-item.links').hover(function(){
+    $(this).toggleClass('animated pulse');
+  });
+
   $('#about').on('click', function() {
   //add paddding to text not box 
 
@@ -184,3 +188,4 @@ function close_box() {
     $('.backdrop, .box').remove();
   });
 }
+
