@@ -105,10 +105,10 @@ $(document).ready(function() {
 
 
   //lightbox only works on screens above 410px, reference: http://www.tonylea.com/2011/how-to-create-your-own-jquery-lightbox/
-  if ($(window).width() > 480 ) {
+  if ($(window).width() > 410 ) {
 
     //lightbox items on click function
-    $('.grid-item .img').click(function() {
+    $('.img').click(function() {
       //makes images bigger instead of using lightbox
       //if ($(window).width() < 620 ){
         $( this ).parent('.grid-item').toggleClass('expandSmall');
