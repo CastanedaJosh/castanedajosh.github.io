@@ -1,6 +1,16 @@
 
+//once page loads the overlay will be removed
+window.addEventListener("load", function(){
+  var loadScreen = $("#overlay");
+  loadScreen.remove();
+
+});
+
+
 
 $(document).ready(function() {
+
+   
 
 //add images to grid, files/images are listed as numbers
  /* for(var i = 1; i <= 23; i++){
@@ -51,8 +61,12 @@ $(document).ready(function() {
 
   }//end of masonOff
 
+
+
   //fixes overlap issues of pictures, waits until images loads to put them into the grid
   var $grid = $('.grid').imagesLoaded(function() {
+
+
 
     // init Masonry after all images have loaded
     $grid.masonry({
@@ -63,10 +77,50 @@ $(document).ready(function() {
       gutter: gutterSize
     });
 
+
+
     //helps with overlapping issue on devices under 400px
     $grid.masonry();
     masonOff();
     $grid.masonry();
+
+
+//testing loading of images, without images in html
+/*
+     var $items = getItems();
+    masonryImagesReveal( $items );
+  
+
+ function masonryImagesReveal( $items ) {
+  var msnry = $grid.data('masonry');
+  var itemSelector = msnry.options.itemSelector;
+  // hide by default
+  $items.hide();
+  // append to container
+  $grid.append( $items );
+  $items.imagesLoaded().progress( function( imgLoad, image ) {
+    // get item
+    // image is imagesLoaded class, not <img>, <img> is image.img
+    var $item = $( image.img ).parents( itemSelector );
+    // un-hide item
+    $item.show();
+    // masonry does its thing
+    msnry.appended( $item );
+  });
+  
+  return this;
+};
+
+function getItems() {
+  var items = '';
+  for ( var i=1; i <= 23; i++ ) {
+    items += '<div class="grid-item"><img class="img" src="img/' + i + '.jpg"></div>';
+  }
+  // return jQuery object
+  return $( items );
+}
+*/
+//last of loading of images
 
     //checks window size settings when window is resized
     $(window).resize(function() {

@@ -12,6 +12,27 @@ body {
   font-family: 'Montserrat', 'HelveticaNeue', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
+/* loading screen */
+#overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: #000;
+    opacity: 1;
+    filter: alpha(opacity=100);
+    z-index: 10;
+}
+#loading {
+  font-size: 3rem;
+    position: absolute;
+
+}
+
+/* end of loading screen */
+
+
 a,
 a:hover,
 a:link{
@@ -71,7 +92,7 @@ p span {
 #about{
   width:  390px;
   cursor: pointer;
-  z-index: 10;
+  z-index: 3;
 }
 
 #aboutText{
@@ -172,10 +193,11 @@ p span {
   left: 0px;
   width: 100%;
   background: #000;
-  opacity: .0;
+  opacity: .5;
+  height: 100%;
   filter: alpha(opacity=0);
-  z-index: 5;
-  display: none;
+  z-index: 10;
+  display: block;
 }
 
 .box {
