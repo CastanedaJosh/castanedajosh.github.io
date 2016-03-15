@@ -108,26 +108,8 @@ $(document).ready(function() {
   //lightbox only works on screens above 410px, reference: http://www.tonylea.com/2011/how-to-create-your-own-jquery-lightbox/
   if ($(window).width() > 410) {
     if (/iP(hone|od)|android.+mobile|BlackBerry|IEMobile/i.test(navigator.userAgent) || /(tablet|ipad|playbook|silk)|(android(?!.*mobile))/i.test(navigator.userAgent)) {
-      //if tablet or smartphone do nothing
-    } else {
-      //effects on images when hovering , not used in about and email box because of resizing issues
-      $('.grid-item .img, .socialIcon').hover(function() {
-        $(this).toggleClass('animated pulse');
-      });
-
-      //lightbox items on click function
-      $('.img').click(function() {
-        //makes images bigger instead of using lightbox
-        //if ($(window).width() < 620 ){
-        $(this).parent('.grid-item').toggleClass('expandSmall');
-        $grid.masonry();
-        /*
-          }else{
-            $( this ).parent('.grid-item').toggleClass('expand');
-            $grid.masonry();
-          }
-        */
-        /* currently blocked out is the lighbox settings using expand class above instead that enlarges images
+            // lighbox settings are being using instead of expand class above below because sizing issues in smartphone and tablet browsers
+            // *****************don't think this code is future proof--look here if issue occurs on table and phones
 
             $('body').append('<div onclick="close_box()" class="backdrop"></div><img onclick="close_box()" class="box" src="' + $(this).attr("src") + '"></div>');
             $('.backdrop').css('height', '' + $(document).height() + 'px');
@@ -174,7 +156,20 @@ $(document).ready(function() {
         //end of lightbox settings
 
 
-            */
+            
+    } else {
+      //effects on images when hovering , not used in about and email box because of resizing issues
+      $('.grid-item .img, .socialIcon').hover(function() {
+        $(this).toggleClass('animated pulse');
+      });
+
+      //lightbox items on click function
+      $('.img').click(function() {
+        //makes images bigger instead of using lightbox
+        //if ($(window).width() < 620 ){
+        $(this).parent('.grid-item').toggleClass('expandSmall');
+        $grid.masonry();
+
       }); //end of img click function
 
     } //end of tablet and smartphone detection
