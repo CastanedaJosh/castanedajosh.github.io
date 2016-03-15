@@ -140,7 +140,7 @@ $(document).ready(function() {
               'opacity': '.50'
             }, 300, 'linear');
             $('.box').animate({
-              'opacity': '.50'
+              'opacity': '1.00'
             }, 300, 'linear');
             $('.backdrop, .box').css('display', 'block');
             
