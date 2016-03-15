@@ -111,6 +111,7 @@ $(document).ready(function() {
             // lighbox settings are being using instead of expand class above below because sizing issues in smartphone and tablet browsers
             // *****************don't think this code is future proof--look here if issue occurs on table and phones
 
+        $('.img').click(function() {
             $('body').append('<div onclick="close_box()" class="backdrop"></div><img onclick="close_box()" class="box" src="' + $(this).attr("src") + '"></div>');
             $('.backdrop').css('height', '' + $(document).height() + 'px');
 
@@ -153,6 +154,8 @@ $(document).ready(function() {
                 "height": "auto"
               });
             }
+         }); //end of img click function
+
         //end of lightbox settings
 
 
