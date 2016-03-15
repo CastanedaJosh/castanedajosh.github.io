@@ -105,10 +105,9 @@ $(document).ready(function() {
 
   });
 
-  //lightbox only works on screens above 410px, reference: http://www.tonylea.com/2011/how-to-create-your-own-jquery-lightbox/
-  if ($(window).width() > 410) {
-    if (/iP(hone|od)|android.+mobile|BlackBerry|IEMobile/i.test(navigator.userAgent) || /(tablet|ipad|playbook|silk)|(android(?!.*mobile))/i.test(navigator.userAgent)) {
-            // lighbox settings are being using instead of expand class above below because sizing issues in smartphone and tablet browsers
+  //lightbox reference: http://www.tonylea.com/2011/how-to-create-your-own-jquery-lightbox/
+    if (/iP(hone|od)|android.+mobile|BlackBerry|IEMobile/i.test(navigator.userAgent) || /(tablet|ipad|playbook|silk)|(android(?!.*mobile))/i.test(navigator.userAgent) && $(window).width() > 410) {
+            // (blocked out becuase of liglighbox settings are being using instead of expand class above below because sizing issues in smartphone and tablet browsers
             // *****************don't think this code is future proof--look here if issue occurs on table and phones
 
         $('.img').click(function() {
@@ -141,7 +140,7 @@ $(document).ready(function() {
               'opacity': '.50'
             }, 300, 'linear');
             $('.box').animate({
-              'opacity': '1.00'
+              'opacity': '.50'
             }, 300, 'linear');
             $('.backdrop, .box').css('display', 'block');
             
@@ -177,7 +176,6 @@ $(document).ready(function() {
 
     } //end of tablet and smartphone detection
 
-  } //end of if (screen > 410) statement 
 
   //start of, clicking on about box changes
 
