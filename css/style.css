@@ -276,6 +276,16 @@ footer {
   }
 }
 
+@media screen and (max-width: 400px){
+  p#aboutText{
+    font-size: 14px;
+  }
+
+  span.headers{
+    font-size: 2.5rem;
+  }
+}
+
 
 /* animations code from animate.css */
 
