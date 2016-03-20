@@ -107,7 +107,7 @@ $(document).ready(function() {
 
   //lightbox reference: http://www.tonylea.com/2011/how-to-create-your-own-jquery-lightbox/
     if (/iP(hone|od)|android.+mobile|BlackBerry|IEMobile/i.test(navigator.userAgent) || /(tablet|ipad|playbook|silk)|(android(?!.*mobile))/i.test(navigator.userAgent) && $(window).width() > 410) {
-            // (blocked out becuase of liglighbox settings are being using instead of expand class above below because sizing issues in smartphone and tablet browsers
+            // considering doing 430px or 500px instead of 410px for min, liglighbox settings are being using instead of expand class above below because sizing issues in smartphone and tablet browsers
             // *****************don't think this code is future proof--look here if issue occurs on table and phones
 
         $('.img').click(function() {
@@ -161,7 +161,7 @@ $(document).ready(function() {
             
     } else {
       //effects on images when hovering , not used in about and email box because of resizing issues
-      $('.grid-item .img, .socialIcon').hover(function() {
+      $('.grid-item .img, .socialIcon, .developer').hover(function() {
         $(this).toggleClass('animated pulse');
       });
 

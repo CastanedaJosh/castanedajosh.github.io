@@ -240,14 +240,15 @@ p span {
   background-color: #F9F9F9;
 }
 
-footer {
-  color: #FFF;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  background-color: #444;
-  text-align: center;
+.devloper {
+  color: #333;
+  padding: 10px;
+  width: 100% !important;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+      text-decoration: underline;
+
 }
 
 
