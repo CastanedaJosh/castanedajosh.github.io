@@ -1111,7 +1111,7 @@
 				width: 100%;
 				color: rgba(255, 255, 255, 0.5);
 				z-index: 1;
-        
+
         -moz-transition: opacity 0.5s ease-in-out;
 				-webkit-transition: opacity 0.5s ease-in-out;
 				-ms-transition: opacity 0.5s ease-in-out;
@@ -1134,7 +1134,7 @@
 				background-size: contain;
 				opacity: 0;
         position: absolute;
-        
+
         overflow: auto;
         margin: auto;
         left: 0;
@@ -1287,7 +1287,7 @@
     background-size: cover;
     -webkit-filter: blur(82px);
     filter: blur(82px);
-    padding: 0; 
+    padding: 0;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -1296,20 +1296,20 @@
     color: rgba(255, 255, 255, 0.5);
     z-index: 0;
     opacity: 0;
-  
+
 /*
     -moz-transition: opacity 0.75s ease, width 0.75s ease;
 		-webkit-transition: opacity 0.75s ease, width 0.75s ease;
 		-ms-transition: opacity 0.75s ease, width 0.75s ease;
 		transition: opacity 0.75s ease, width 0.75s ease;
 */
-  
+
   -webkit-animation: fadein 0.75s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 0.75s; /* Firefox < 16 */
         -ms-animation: fadein 0.75s; /* Internet Explorer */
          -o-animation: fadein 0.75s; /* Opera < 12.1 */
             animation: fadein 0.75s;
-  
+
 
 }
 
@@ -1361,6 +1361,9 @@ body.fullscreen.about #main {
 
 .contact-info {
   text-align: center;
+}
+.contact-div {
+	margin-bottom: 40px;
 }
 @media (max-width: 799px) {
   .contact-info {
