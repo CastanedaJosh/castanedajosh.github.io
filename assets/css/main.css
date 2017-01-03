@@ -831,7 +831,11 @@
 /* Footer */
 
 	#footer {
-		padding: 2.25em 2.25em 1em 2.25em ;
+		/*padding: 2.25em 2.25em 1em 2.25em ;*/
+
+		padding: 0 0.75em;
+    max-width: 980px;
+    margin: 0 auto;
 	}
 
 		#footer .copyright {
